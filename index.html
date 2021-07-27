@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fancy-weather</title>
+    <script src="https://kit.fontawesome.com/2d1d7f4dfa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="page-header">
+       
+        <nav id="nav-buttons" class="nav-buttons">
+           
+            <div id="language" class="buttons-language" title="Change Language" aria-label="Change application language">
+                <i class="fas fa-chevron-down arrow-down" aria-hidden="true"></i>
+                <button class="button button-language-top">en</button>
+                <div class="buttons-language-list">
+                    <button class="button-language-list button inactive">en</button>
+                    <button class="button-language-list button">pl</button>
+                </div>
+            </div>
+            <button id="unit" class="button" title="Toggle Measurement Units" aria-label="Toggle between metric and imperial measurement units">
+                <i class="fas fa-chart-bar"></i>
+            </button>
+            <button id="background" class="button" title="Change Background" aria-label="Change the current background Image">
+                <i class="far fa-images"></i>
+            </button>
+            <button id="refresh" class="button" title="Refresh Weather" aria-label="Refresh the current weather conditions">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </nav>
+
+        <div id="search-bar" class="search-bar">
+            <form id="search-bar__form" class="search-bar__form" role="search">
+                <label for="search-bar__text" class="offscreen">Enter a new location</label>
+                <input id="search-bar__text" class="search-bar__text" type="text" role="searchbox" autocomplete="off" placeholder="City, State, Country">
+                <button id="search-bar__button" class="search-bar__button button" title="Submit Location" aria-label="Submit Search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+    <main class="page-main">
+        <section id="current-forecast" class="current-forecast fade-in" role="region" aria-labelledby="current forecast">
+            <h2 id="current-forecast__location" class="current-forecast__location">Current Conditions</h2>
+            <div id="current-forecast__conditions" class="current-forecast__conditions"></div>
+        </section>
+        <div id="geolocation" class="geolocation">
+        </div>
+    </main>
+    <footer class="page-footer">
+        <section id="daily-forecast" class="daily-forecast fade-in" role="region" aria-labelledby="daily forecast for six days">
+            <h2 id="daily-forecast__title" class="daily-forecast__title offscreen">Six Day Forecast</h2>
+            <div id="daily-forecast__contents" class="daily-forecast__contents"></div>
+        </section>
+    </footer>
+</body>
+</html>
